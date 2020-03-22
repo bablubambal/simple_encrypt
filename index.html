@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta author="bablu" content="This is the basic cryptographic calculator">
+	<title>Encrypt & Decrypt</title>
+	<style>
+	.footer{
+	padding:25px;
+	margin:20px;
+	font-family:sans-serif;
+	
+	
+	
+	}
+	
+	
+	</style>
+</head>
+<body>
+	<div > <h2 class="text-center m-5 p-5" style="color:red;"> Encrypt Your message ... Security...</h2></div>
+<div class=" container  mt-5 col-sm-4 col-sm offset-4">
+
+
+	<div class="form-group">
+
+		<input type="text" autocomplete="off" class="form-control" name="string" id="string" placeholder="Enter the String to Encrypt">
+	</div>
+	<button class="btn btn-lg btn-block btn-primary" onclick="enc()">Encrypt</button>
+	<div class="form-group">
+	<p id="encrypted" style="overflow-y:scroll; " class="form-control input-lg" placeholder="Encrypted String is.." ></p>
+	<div class="form-group">
+
+		<input type="text" autocomplete="off" class="form-control" name="number" id="number" placeholder="Enter the Numeric value to Decrypt">
+	</div>
+	<button class="btn btn-lg btn-block btn-primary" onclick="dec()">Decrypt</button>
+	<div class="form-group">
+	<p id="decrypted" style="overflow-y:scroll; " class="form-control" placeholder=" Decrypted String is "></p>
+	</div>
+
+
+
+	</div>
+	<footer class="footer"><p class="text-center  ">@Bablu Bambal</p></footer>
+</body>
+
+<script>
+var string = "";
+var encrypted = [];
+	function enc(){
+			
+			var data = document.getElementById('string').value;
+//console.log(data);
+			var i;
+for(i=0; i<data.length;i++){
+	//var c = data.charAt(i);
+	var c = data.charCodeAt(i);
+	encrypted[i] = c;
+	//console.log(encrypted);
+}
+
+	document.getElementById('encrypted').innerHTML = encrypted;
+
+	}
+
+function dec(){
+				var data = document.getElementById('number').value;
+				//console.log(data);
+				var res = data.split(",")
+				console.log(res);
+				console.log(typeof(res));
+				var i;
+				var decrypted = "";
+				for(i=0; i<res.length;i++){
+					 dec = String.fromCharCode(res[i]);
+					 console.log(dec);
+					 decrypted = decrypted+dec;
+
+
+				}
+				document.getElementById('decrypted').innerHTML = decrypted;
+	
+				}
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</html>
