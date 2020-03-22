@@ -5,6 +5,8 @@
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<meta charset="UTF-8">
 	<meta author="bablu" content="This is the basic cryptographic calculator">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 	<title>Encrypt & Decrypt</title>
 	<style>
 	.footer{
@@ -30,14 +32,17 @@
 	</div>
 	<button class="btn btn-lg btn-block btn-primary" onclick="enc()">Encrypt</button>
 	<div class="form-group">
-	<p id="encrypted" style="overflow-y:scroll; " class="form-control input-lg" placeholder="Encrypted String is.." ></p>
+<!-- 	<p id="encrypted" style="overflow-y:scroll; " class="form-control input-lg" placeholder="Encrypted String is.." ></p> -->
+			<textarea id="encrypted" style="overflow-y:scroll; " class="form-control input-lg" placeholder="Encrypted String is.." ></textarea>
+
 	<div class="form-group">
 
 		<input type="text" autocomplete="off" class="form-control" name="number" id="number" placeholder="Enter the Numeric value to Decrypt">
 	</div>
 	<button class="btn btn-lg btn-block btn-primary" onclick="dec()">Decrypt</button>
 	<div class="form-group">
-	<p id="decrypted" style="overflow-y:scroll; " class="form-control" placeholder=" Decrypted String is "></p>
+<!-- 	<p id="decrypted" style="overflow-y:scroll; " class="form-control" placeholder=" Decrypted String is "></p> -->
+		<textarea id="decrypted" style="overflow-y:scroll; " class="form-control" placeholder=" Decrypted String is "></textarea>
 	</div>
 
 
